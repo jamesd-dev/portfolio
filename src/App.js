@@ -1,8 +1,11 @@
 import Title from './components/sections/Title';
+import './App.scss';
 
 function App() {
   return (
-    <Title/>
+    <div id="strip-page-container">
+      <Title/>
+    </div>
   );
 }
 

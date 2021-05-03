@@ -2,55 +2,74 @@
 
 #title-container {
     width: 100%;
-    height: 20rem;
-    background-color: $primary-1;
+    height: 30vh;
+    background-color: $secondary-1;
     position: relative;
     z-index: -2;
 
-    #confetti-container {
-width: 100%;
-height: 100%;
-overflow: hidden;
-    position: relative;
-    .confetti {
-        position: absolute;
-        animation-name: drop;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  z-index: 1;
-    }
-}
-
-    #profile-image {
+    #name-container {
+      position: relative;
+      background-color: $primary-1;
+      height: 80%;
+      width: 100%;
+      #confetti-container {
+        width: 100%;
         height: 100%;
+        overflow: hidden;
         position: absolute;
-        bottom: -24.8438%;
-        right: -5%;
-        z-index: 2;
+        .confetti {
+          position: absolute;
+          animation-name: drop;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+          z-index: 1;
+        }
+    }
+        #title-name {
+            font: 400 10rem "Vibur";
+            text-align: center;
+            position: absolute;
+            margin: 0 auto;
+            top: 0rem;
+            right: 0;
+            left: 0;
+            color: $primary-3;
+            text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em $accent-1, 0 0 0.5em $accent-1, 0 0 0.1em $accent-1, 0 10px 3px #000;
+            span{
+              animation: blink linear infinite 2s;
+              &:nth-of-type(2){
+                animation: blink linear infinite 3s;
+              }
+            }
+          }
     }
 
-    .logo {
-        text-align: center;
+    #profession-container {
+      background-color: $primary-3;
+      position: relative;
+      height: 20%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      #profile-image {
+        height: 500%;
         position: absolute;
-        top: 0;
-        margin: 0 auto;
-        left: 0;
-        right: 0;
-         z-index: -1;
-      }
-      
-      .logo b{
-        font: 400 19vh "Vibur";
-        color: #fee;
-        text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em $accent-1, 0 0 0.5em $accent-1, 0 0 0.1em $accent-1, 0 10px 3px #000;
-      }
-      .logo b span{
-        animation: blink linear infinite 2s;
-      }
-      .logo b span:nth-of-type(2){
-        animation: blink linear infinite 3s;
-      }
-
+        bottom: -125%;
+        right: 4vh;
+        z-index: 2;
+        @media (min-width: 1100px) {
+          right: -7rem;
+        }
+    }
+      #title-profession {
+        font: 900 4vh "Glacial";
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        color: $primary-1;
+        letter-spacing: 1rem;
+      } 
+    }
 }
 
 @keyframes drop {
@@ -68,7 +87,7 @@ overflow: hidden;
       text-shadow: inherit;
     }
     79%{
-       color: $primary-1;
+      color: $primary-1;
     }
     80% {
       
