@@ -3,23 +3,95 @@
 #title-container {
     width: 100%;
     height: 20rem;
-    background-color: $primary-2;
-    overflow: hidden;
+    background-color: $primary-1;
+    position: relative;
+    z-index: -2;
+
+    #confetti-container {
+width: 100%;
+height: 100%;
+overflow: hidden;
     position: relative;
     .confetti {
         position: absolute;
         animation-name: drop;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+  z-index: 1;
+    }
+}
+
+    #profile-image {
+        height: 100%;
+        position: absolute;
+        bottom: -24.8438%;
+        right: -5%;
+        z-index: 2;
     }
 
-    @keyframes drop {
-        0% {
-            transform: translateY(-100%) rotate(0deg);
-        }
-        100% {
-            transform: translateY(20rem) rotate(359deg);
-        }
-    }
+    .logo {
+        text-align: center;
+        position: absolute;
+        top: 0;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+         z-index: -1;
+      }
+      
+      .logo b{
+        font: 400 19vh "Vibur";
+        color: #fee;
+        text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em $accent-1, 0 0 0.5em $accent-1, 0 0 0.1em $accent-1, 0 10px 3px #000;
+      }
+      .logo b span{
+        animation: blink linear infinite 2s;
+      }
+      .logo b span:nth-of-type(2){
+        animation: blink linear infinite 3s;
+      }
 
 }
+
+@keyframes drop {
+    0% {
+        transform: translateY(-100%) rotate(0deg);
+    }
+    100% {
+        transform: translateY(20rem) rotate(359deg);
+    }
+}
+
+@keyframes blink {
+    78% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    79%{
+       color: $primary-1;
+    }
+    80% {
+      
+      text-shadow: none;
+    }
+    81% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    82% {
+      color: $primary-1;
+      text-shadow: none;
+    }
+    83% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+    92% {
+      color: $primary-1;
+      text-shadow: none;
+    }
+    92.5% {
+      color: inherit;
+      text-shadow: inherit;
+    }
+  }
