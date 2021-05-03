@@ -1,0 +1,32 @@
+$primary-1: #343434;
+$primary-2: #B75D69;
+$primary-3: #EFD9CE;
+$secondary-1: #90BE6D;
+$accent-1: #DA3E52;
+$accent-2: #F46036;
+
+@font-face {
+    font-family: Glacial;
+    src: url("./fonts/GlacialIndifference-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Glacial;
+    font-weight: bold;
+    src: url("./fonts/GlacialIndifference-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Glacial;
+    font-style: italic;
+    src: url("./fonts/GlacialIndifference-Italic.otf") format("opentype");
+}
+
+:export {
+    primary1: #343434;
+    primary2: $primary-2;
+    primary3: $primary-3;
+    secondary1: $secondary-1;
+    accent1: $accent-1;
+    accent2: $accent-2;
+  }
