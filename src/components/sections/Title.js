@@ -6,7 +6,7 @@ import profileImage1 from "../../assets/images/profile1.png";
 function Title() {
     const [dummyState, setDummyState] = useState(0);
 
-    const forceReload = () => setDummyState(Math.random());
+    const forceReload = () => setDummyState(dummyState + 1);
     const removeAllChildren = (element) => {while (element.firstChild) {element.removeChild(element.lastChild);}}
     const createConfettiEffect = () => {
         let container = document.getElementById("confetti-container");
