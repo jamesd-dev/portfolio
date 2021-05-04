@@ -2,16 +2,18 @@
 
 #title-container {
     width: 100%;
-    height: 20vh;
+    height: 10rem;
     background-color: $secondary-1;
     position: relative;
-    z-index: -2;
 
     #name-container {
       position: relative;
       background-color: $primary-1;
       height: 80%;
       width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       #confetti-container {
         width: 100%;
         height: 100%;
@@ -26,12 +28,9 @@
         }
     }
         #title-name {
-            font: 400 15vw "Vibur";
+            font: 400 3rem "Vibur";
             text-align: left;
-            position: absolute;
-            margin: 0 auto;
-            top: .5rem;
-            left: 2rem;
+            margin-right: 4rem;
             color: $primary-3;
             text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em $accent-1, 0 0 0.5em $accent-1, 0 0 0.1em $accent-1, 0 10px 3px #000;
             span{
@@ -54,22 +53,117 @@
         height: 500%;
         position: absolute;
         bottom: -128%;
-        right: -2rem;
-        z-index: 2;
-        @media (min-width: 1100px) {
-          right: -7rem;
-        }
+        right: -1.8rem;
+        z-index: 10;
     }
       #title-profession {
         font: 900 3.6vw "Glacial";
         width: 100%;
         text-align: left;
-        margin-left: 10vw;
+        margin-left: 7vw;
         text-transform: uppercase;
         color: $primary-1;
         letter-spacing: .7rem;
-        z-index: 10;
       } 
+    }
+    @media (max-width: 340px) {
+      height: 7rem;
+      #name-container {
+        #title-name {
+          font: 400 2.4rem "Vibur";
+          text-align: left;
+          margin-left: 1rem;
+          width: 100%;
+          left: 0;
+        }
+      }
+      #profession-container {
+        #profile-image {
+          right: -7vw;
+        }
+        #title-profession {
+          letter-spacing: .5rem;
+        }
+      }
+    }
+    @media (min-width: 450px) {
+      #name-container {
+        #title-name {
+          font: 400 13vw "Vibur";
+          text-align: center;
+          width: 100%;
+          left: 0;
+        }
+      }
+      #profession-container {
+        #profile-image {
+          right: -4vw;
+        }
+        #title-profession {
+          text-align: center;
+          margin-left: 0;
+          font: 900 3vw "Glacial";
+        }
+      }
+    }
+    @media (min-width: 550px) {
+      #name-container {
+        #title-name {
+          font: 400 4rem "Vibur";
+          text-align: center;
+          width: 100%;
+          left: 0;
+        }
+      }
+      #profession-container {
+        #profile-image {
+          right: -1rem;
+          height: 600%;
+          bottom: -150%;
+        }
+        #title-profession {
+          text-align: center;
+          margin-left: 0;
+          font: 900 0.8rem "Glacial";
+          letter-spacing: 1rem;
+        }
+      }
+    }
+    @media (min-width: 768px) {
+      height: 12rem;
+      #name-container {
+        #title-name {
+          font: 400 10vw "Vibur";
+          text-align: center;
+        }
+      }
+      #profession-container {
+        #profile-image {
+          right: -2rem;
+          height: 600%;
+          bottom: -152%;
+        }
+        #title-profession {
+          font: 900 1rem "Glacial";
+          letter-spacing: 1rem;
+        }
+      }
+    }
+    @media (min-width: 1200px) {
+      height: 15rem;
+      #name-container {
+        #title-name {
+          font: 400 9rem "Vibur";
+          text-align: center;
+        }
+      }
+      #profession-container {
+        #profile-image {
+          right: -7rem;
+          height: 600%;
+          bottom: -152%;
+        }
+      }
     }
 }
 
