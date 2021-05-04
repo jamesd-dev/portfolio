@@ -2,7 +2,7 @@
 
 #title-container {
     width: 100%;
-    height: 30vh;
+    height: 20vh;
     background-color: $secondary-1;
     position: relative;
     z-index: -2;
@@ -26,13 +26,12 @@
         }
     }
         #title-name {
-            font: 400 10rem "Vibur";
-            text-align: center;
+            font: 400 15vw "Vibur";
+            text-align: left;
             position: absolute;
             margin: 0 auto;
-            top: 0rem;
-            right: 0;
-            left: 0;
+            top: .5rem;
+            left: 2rem;
             color: $primary-3;
             text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em $accent-1, 0 0 0.5em $accent-1, 0 0 0.1em $accent-1, 0 10px 3px #000;
             span{
@@ -54,20 +53,22 @@
       #profile-image {
         height: 500%;
         position: absolute;
-        bottom: -126%;
-        right: 4vh;
+        bottom: -128%;
+        right: -2rem;
         z-index: 2;
         @media (min-width: 1100px) {
           right: -7rem;
         }
     }
       #title-profession {
-        font: 900 2.2rem "Glacial";
+        font: 900 3.6vw "Glacial";
         width: 100%;
-        text-align: center;
+        text-align: left;
+        margin-left: 10vw;
         text-transform: uppercase;
         color: $primary-1;
-        letter-spacing: 1rem;
+        letter-spacing: .7rem;
+        z-index: 10;
       } 
     }
 }
