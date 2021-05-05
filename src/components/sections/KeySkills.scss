@@ -6,11 +6,12 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding: 3rem 3rem;
+    padding: 3rem;
     #key-skill-block-container {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        align-items: center;
         width: 100%;
     }
     .key-skill-block {
@@ -32,6 +33,28 @@
         .key-skill-description {
             text-align: justify;
             font-size: .8rem;
+        }
+    }
+
+    @media (min-width: 350px) {
+        .key-skill-block {
+            max-width: 13rem;
+            margin: 5vw;
+        }
+    }
+
+    @media (min-width: 800px) {
+        #key-skill-block-container {
+            flex-direction: row;
+            align-items: flex-start;
+            width: 90%;
+        }
+        .key-skill-block {
+            max-width: 12rem;
+            margin: 0;
+            .key-skill-title {
+                letter-spacing: .2rem;
+            }
         }
     }
     
