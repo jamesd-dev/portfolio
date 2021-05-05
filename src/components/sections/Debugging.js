@@ -1,22 +1,28 @@
 import './Debugging.scss';
-import glichImage from '../../assets/images/rose.png';
+import glichImage from '../../assets/images/cutout_statue.png';
 import { useEffect } from 'react';
 
 function Debugging() {
 
-    const MAX_GLITCH_SPEED = 5;
-    const MIN_GLITCH_SPEED = 6;
+    const MAX_GLITCH_SPEED = 7;
+    const MIN_GLITCH_SPEED = 10;
     const MAX_GLITCH_X_OFFSET = 2;
 
 
     useEffect(() => {
         let images = document.getElementsByClassName("glitch-image");
-        for(const image of images) {
-            const glitchSpeed = (Math.random() * MIN_GLITCH_SPEED - MAX_GLITCH_SPEED) + MIN_GLITCH_SPEED;
-            image.style.animationDuration = glitchSpeed + "s";
-            image.style.animationDelay = -Math.random() * glitchSpeed + "s";
-            image.style.left = ((MAX_GLITCH_X_OFFSET / 2) - Math.random(MAX_GLITCH_X_OFFSET)) + "rem";
-            image.style.transitionTimingFunction = `cubic-bezier(${Math.random()}, ${Math.random()}, ${Math.random()}, ${Math.random()})`;
+        for(let i = 0; i < images.length; i++) {
+            const glitchSpeed = (Math.random() * (MIN_GLITCH_SPEED - MAX_GLITCH_SPEED)) + MAX_GLITCH_SPEED;
+            images[i].style.animationDuration = glitchSpeed + "s";
+            images[i].style.animationDelay = (Math.random() * glitchSpeed) - (glitchSpeed / 2) + "s";
+            images[i].style.transitionTimingFunction = `linear`;
+            if(i > 0) {
+                if(i % 2 == 0) {
+                    images[i].style.filter = `hue-rotate(-20deg) saturate(${(Math.random() * 200) + 500}%)`;
+                    images[i].style.zIndex = 0;
+                }
+                images[i].style.left = (Math.random(MAX_GLITCH_X_OFFSET) - (MAX_GLITCH_X_OFFSET / 2)) + "rem";
+            }
         };
     })
 
