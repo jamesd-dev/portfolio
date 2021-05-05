@@ -1,0 +1,56 @@
+@import '/src/theme.scss';
+
+#debugging-container {
+    height: 20rem;
+    width: 100%;
+    background-color: $primary-1;
+    #glitch-container {
+        height: 100%;
+        position: relative;
+        z-index: 3;
+        img {
+            padding: 3rem;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 2;
+            object-fit: contain;
+            -webkit-filter: drop-shadow(5px 5px 5px #000);
+            filter: drop-shadow(5px 7px 15px #000);
+            animation: glitch-anim-1-horizontal infinite alternate;
+            &:nth-of-type(1) {
+                left: 0;
+                top: 0;
+                z-index: -1;
+                animation: none;
+            }
+        }
+
+        @keyframes glitch-anim-1-horizontal {
+            0% { 
+                clip-path: polygon(100% 0, 100% 1%, 0 1%, 0 0);
+            }
+            30% {
+                clip-path: polygon(100% 99%, 100% 100%, 0 100%, 0 99%);
+            }
+            40% {
+                clip-path: polygon(100% 29%, 100% 39%, 0 39%, 0 29%);
+            }
+            60% {
+                clip-path: polygon(100% 99%, 100% 100%, 0 100%, 0 99%);
+            }
+            70% {
+                clip-path: polygon(100% 64%, 100% 90%, 0 90%, 0 64%);
+            }
+            77% {
+                clip-path: polygon(100% 0, 100% 1%, 0 1%, 0 0);
+            }
+            80% {
+                clip-path: polygon(100% 99%, 100% 100%, 0 100%, 0 99%);
+            }
+            90% {
+                clip-path: polygon(60% 12%, 60% 80%, 0 80%, 0 12%);
+            }
+        }
+    }
+}
