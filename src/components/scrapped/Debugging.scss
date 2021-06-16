@@ -1,15 +1,15 @@
 @import '/src/theme.scss';
 
 #debugging-container {
-    height: 40rem;
+    height: 20rem;
     width: 100%;
     background-color: $primary-1;
     position: relative;
     #glitch-container {
-        height: 150%;
+        height: 160%;
         position: absolute;
         bottom: 0;
-        left: -10rem;
+        left: -8rem;
         z-index: 3;
         img {
             padding: 0;
@@ -60,6 +60,36 @@
             100% {
                 clip-path: polygon(0 0, 0 0, 0 0, 0 0);
             }
+        }
+    }
+    #description-container {
+        position: absolute;
+        width: min-content;
+        right: 5%;
+        top: 5%;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        #title {
+            text-align: right;
+            font-size: 10vw;
+            letter-spacing: .3rem;
+            margin: .5rem 0;
+            text-transform: uppercase;
+        }
+        #description {
+            text-align: justify;
+            font-size: .8rem;
+            width: 100%;
+            padding: 1rem;
+            background-color: $primary-2;
+        }
+        .line {
+            width: 100%;
+            margin: .5rem 0;
+            height: .2rem;
+            background-color: $primary-3;
         }
     }
 }

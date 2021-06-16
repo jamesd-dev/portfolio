@@ -31,7 +31,7 @@ function Title() {
             </div>
             <div id="profession-container">
                 <img src={profileImage1} alt="me" id="profile-image"/>
-                <h2 id="title-profession">Web Developer</h2>
+                <h2 id="title-profession">Game Developer</h2>
             </div>
         </div>
     );

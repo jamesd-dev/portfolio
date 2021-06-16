@@ -1,0 +1,46 @@
+@font-face {
+  font-family: Glacial;
+  src: url("./assets/fonts/GlacialIndifference-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Glacial;
+  font-weight: bold;
+  src: url("./assets/fonts/GlacialIndifference-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Glacial;
+  font-style: italic;
+  src: url("./assets/fonts/GlacialIndifference-Italic.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Vibur';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/vibur/v13/DPEiYwmEzw0QRgTuJDsrdPXb.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Glacial', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  color: #EFD9CE;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h16v2h-6v6h6v8H8v-6H2v6H0V0zm4 4h2v2H4V4zm8 8h2v2h-2v-2zm-8 0h2v2H4v-2zm8-8h2v2h-2V4z' fill='%23343434' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+/*# sourceMappingURL=index.css.map */

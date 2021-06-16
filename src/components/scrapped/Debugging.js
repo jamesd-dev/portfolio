@@ -1,5 +1,5 @@
 import './Debugging.scss';
-import glichImage from '../../assets/images/cutout_statue.png';
+import glitchImage from '../../assets/images/cutout_statue.png';
 import { useEffect } from 'react';
 
 function Debugging() {
@@ -17,7 +17,7 @@ function Debugging() {
             images[i].style.animationDelay = (Math.random() * glitchSpeed) - (glitchSpeed / 2) + "s";
             images[i].style.transitionTimingFunction = `linear`;
             if(i > 0) {
-                if(i % 2 == 0) {
+                if(i % 2 === 0) {
                     images[i].style.filter = `hue-rotate(-20deg) saturate(${(Math.random() * 200) + 500}%)`;
                     images[i].style.zIndex = 0;
                 }
@@ -29,11 +29,19 @@ function Debugging() {
     return (
         <div id="debugging-container">
             <div id="glitch-container">
-                <img src={glichImage} alt="glitching rose" className="glitch-image"/>
-                <img src={glichImage} alt="glitching rose" className="glitch-image"/>
-                <img src={glichImage} alt="glitching rose" className="glitch-image"/>
-                <img src={glichImage} alt="glitching rose" className="glitch-image"/>
-                <img src={glichImage} alt="glitching rose" className="glitch-image"/>
+                <img src={glitchImage} alt="glitch" className="glitch-image"/>
+                <img src={glitchImage} alt="glitch" className="glitch-image"/>
+                <img src={glitchImage} alt="glitch" className="glitch-image"/>
+                <img src={glitchImage} alt="glitch" className="glitch-image"/>
+                <img src={glitchImage} alt="glitch" className="glitch-image"/>
+            </div>
+            <div id="description-container">
+                <h3 id="title">Debugging</h3>
+                <div className="line"/>
+                <article id="description">
+                    In my first job as a junior front-end developer, 
+                </article>
+                <div className="line"/>
             </div>
         </div>
     )
