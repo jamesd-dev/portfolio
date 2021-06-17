@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Confetti from '../../classes/Confetti';
 import './Title.scss';
 import profileImage1 from "../../assets/images/profile1.png"; 
+import { position } from "../../personalData.json"
 
 function Title() {
     const [dummyState, setDummyState] = useState(0);
@@ -31,7 +32,7 @@ function Title() {
             </div>
             <div id="profession-container">
                 <img src={profileImage1} alt="me" id="profile-image"/>
-                <h2 id="title-profession">Game Developer</h2>
+                <h2 id="title-profession">{position}</h2>
             </div>
         </div>
     );

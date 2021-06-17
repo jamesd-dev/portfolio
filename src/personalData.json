@@ -1,0 +1,25 @@
+{
+    "name": "James",
+    "surname": "Dawson",
+    "position": "Game Developer",
+    "email": "dawsonjames027@gmail.com",
+    "github": "https://github.com/jamesd-dev",
+    "linkedin": "www.linkedin.com/in/james-e-dawson",
+
+    "elevatorPitch": "I'm a self taught programmer moving from front-end web development to game development. I have a diverse skillset with oodles of programming languages, a history in art and experience working in small teams.",
+    "coreLanguages": [
+        "C#", "Java", "Python", "Javascript", "Lisp"
+    ],
+    "qualities": [
+        "Creative", "Passionate", "Sunny", "Curious"
+    ],
+    "keySkills": [
+        "Debugging", "Game Physics", "Rapid Learning", "Game AI"
+    ],
+    "favouriteGames": [
+        "Sunless Skies", "Animal Crossing: New Leaf", "Pokemon: HeartGold", "The Last Of Us"
+    ],
+    "hobbies": [
+        "Travel", "Gaming", "Reading", "Kayaking"
+    ]
+}

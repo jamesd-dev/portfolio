@@ -1,10 +1,11 @@
 import Title from './components/sections/Title';
+import ScreenApologyMessage from './components/ScreenApologyMessage';
 import './App.scss';
 import { useEffect, useState } from 'react';
+import { MIN_SCREEN_WIDTH } from './Constants';
 
 function App() {
 
-  const MIN_SCREEN_WIDTH = 900;
   const [isSmallScreen, setIsSmallScreen] = useState(false);
 
   let delayedScreenCheck;
@@ -30,7 +31,7 @@ function App() {
 
   return (
     (isSmallScreen) ?
-    <></> :
+    <ScreenApologyMessage/> :
     <div id="strip-page-container">
       <Title/>
     </div>
