@@ -3,6 +3,7 @@ import ScreenApologyMessage from './components/ScreenApologyMessage';
 import './App.scss';
 import { useEffect, useState } from 'react';
 import { MIN_SCREEN_WIDTH } from './Constants';
+import Profile from './components/sections/Profile';
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
     <ScreenApologyMessage/> :
     <div id="strip-page-container">
       <Title/>
+      <Profile/>
     </div>
   );
 }

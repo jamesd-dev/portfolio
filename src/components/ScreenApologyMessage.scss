@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    #apology-message {
+    .apology-message {
         background-color: $primary-3;
         background-image: url("https://www.transparenttextures.com/patterns/binding-dark.png");
         background-blend-mode: hard-light;
@@ -16,6 +16,7 @@
         max-width: 90%;
         border-radius: 2rem;
         box-shadow: 0px 0px 15px 5px #000000;
+        margin-top: 1rem;
         p {
             text-align: center;
             color: $primary-1;

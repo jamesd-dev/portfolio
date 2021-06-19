@@ -1,17 +1,28 @@
-import { MIN_SCREEN_WIDTH } from '../Constants';
 import './ScreenApologyMessage.scss';
-import MuiButton from './mui/MuiButton';
 import CvDownloadLink from './CvDownloadLink';
 
 function ScreenApologyMessage() {
     return (
         <div id="apology-message-container">
-            <div id="apology-message">
+            <div className="apology-message">
                 <p>
-                    Errk! Embarrassingly, this site doesn't work on small screens.<br/>
-                    I used all that time to make fun content instead!<br/>
-                    Try again on a chonkier screen.<br/><br/>
-                    If you just need my cv, please use the link below!
+                    Hello!
+                </p>
+            </div>
+            <div className="apology-message">
+                <p>
+                    Welcome to James Dawson's Magnificent Portfolio!
+                </p>
+            </div>
+            <div className="apology-message">
+                <p>
+                    Unfortunately I didn't make this site mobile friendly<br/>
+                    So please try again on a chonkier screen.
+                </p>
+            </div>
+            <div className="apology-message">
+                <p>
+                    However, if you just need my cv, please use the link below!
                 </p>
             </div>
             <CvDownloadLink/>

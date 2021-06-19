@@ -1,7 +1,9 @@
-import { withStyles, Button } from "@material-ui/core"
+import { Button } from "@material-ui/core"
+import { makeStyles, createStyles } from '@material-ui/core/styles';
 import {accent2, primary3} from '../../theme.json';
+import clsx from "clsx";
 
-const MuiButton = withStyles({
+const useStyles = makeStyles(() => createStyles({
     root: {
         background: accent2,
         margin: '1rem',
@@ -27,6 +29,11 @@ const MuiButton = withStyles({
             transition: '.1s ease-in',
         }
     }
-})(Button);
+}))
+
+function MuiButton({children, muiStyles}) {
+    const classes = useStyles();
+    return <Button className={clsx(classes.root, muiStyles)}>{children}</Button>
+}
 
 export default MuiButton;
